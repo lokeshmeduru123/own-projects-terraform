@@ -9,7 +9,22 @@ variable "ami" {
   
 }
 
+variable "instance_type" {
+    type = string
+    default = "t2.micro"
+  
+}
 
+variable "tags" {
+    default = {
+        project = "Expence"
+        Name = "Db"
+        module = "Db"
+        terraform = true
+        environment = "Dev"
+    }
+  
+}
 
 variable "allow-port-22" {
     default = "22"
@@ -19,9 +34,4 @@ variable "allow-port-22" {
 variable "allowed_cidr" {
     default = ["0.0.0.0/0"]
     type = list  
-}
-
-variable "instance_type" {
-    default = "db"
-  
 }

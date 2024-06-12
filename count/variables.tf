@@ -9,6 +9,12 @@ variable "ami" {
   
 }
 
+variable "instance_type" {
+    type = string
+    default = "t2.micro"
+  
+}
+
 
 
 variable "allow-port-22" {
@@ -21,7 +27,8 @@ variable "allowed_cidr" {
     type = list  
 }
 
-variable "instance_type" {
-    default = "db"
-  
+
+variable "instance_names" {
+    type = list
+    default = ["db", "frontend","backend"]
 }
