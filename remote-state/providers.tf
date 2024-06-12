@@ -5,8 +5,7 @@ terraform {
       version = "5.48.0"
   }
 }
-
-  backend "s3" {
+backend "s3" {
     bucket = "devops-project.site-state"
     key    = "devops-project.site-state-demo"
     region = "us-east-1"
